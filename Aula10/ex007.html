@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        #txtn1 {
+            width: 85px;
+            margin-bottom: 10px;
+        }
+
+        #txtn2 {
+            width: 85px;
+        }
+        
+        input {
+            font: normal 24px Arial; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> 
+                    +
+    <input type="number" name="txtn2" id="txtn2">
+    
+    <input type="button" value="Somar" onclick="somar()">
+    
+    <div id="res">Resultado</div>
+    <script>
+        function somar(){//não importa a posição da função
+            let numero1 = Number(caixa1.value)//aqui é convertido para numero
+            
+            let numero2 = Number(caixa2.value)//aqui é convertido para numero
+            
+            let soma = numero1 + numero2
+
+            res.innerHTML = `A soma de ${numero1} e ${numero2} é igual a <strong>${soma}<strong>`
+        }
+        var caixa1 = document.querySelector('input#txtn1')//string
+        var caixa2 = document.querySelector('input#txtn2')//string
+        var res = document.querySelector('div#res')
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países</title>
+    <style>
+        input {
+            width: 80px;
+            margin-left: 10px;
+        }
+        .container {
+            display:inline-block;
+            background-color: #00ff55;
+            width: 352px;    
+            padding: 10px;
+            margin: 100px;
+            border-radius: 10px;
+        }
+
+        #res {
+            text-align: center;
+            background-color: rgb(143, 201, 10);
+            width: 200px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Sistema de Nacionalidade</h1>
+        Digite aqui o seu pais:<input type="text" name="txtpais" id="txtpais">
+        <input type="button" value="Verificar" onclick="verificar()">
+        <div id="res"></div>
+    </div>
+    
+    <script>
+        function verificar(){
+        let pais = document.getElementById('txtpais').value
+        pais = pais.toUpperCase()
+        var resultado = document.querySelector('div#res')
+        if( pais != 'BRASIL') {
+            resultado.innerHTML = '<p>Você é <em>Estrangeiro</em></p>'
+        } else {
+            resultado.innerHTML = '<p>Você é <strong>Brasileiro</strong></p>'
+        }
+    }
+    </script>
+</body>
+</htm

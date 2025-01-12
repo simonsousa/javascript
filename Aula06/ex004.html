@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+    </style>
+</head>
+<body><!-- Atalho para abrir o nodeJs: CTRL + SHIFT + ' -->
+    
+    <script>
+        var nome = window.prompt('Qual é seu nome?');
+        document.write(`Olá <strong>${nome}</strong> seu nome tem ${nome.length} letras<br>`)
+        document.write(`Seu nome em maiúsculas é <em>${nome.toUpperCase()}</em><br>`)
+        document.write(`Seu nome em minúsculas é <em>${nome.toLowerCase()}</em>`)
+        /*
+            FORMATANDO NÚMEROS
+        
+        Terminal do nodeJs
+        
+        var n1 = 1543.5
+        undefined
+        n1
+        1545.5
+        n1.toFixed(2)
+        '1545.50'
+        n1.toFixed(2).replace('.' , ',')    -> troca o ponto pela vírgula
+        '1545,50'
+
+        n1.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})
+        'R$ 1.545,50'
+        n1.toLocaleString('pt-BR',{style: 'currency', currency: 'USD'})
+        'US$ 1.545,50'
+        n1.toLocaleString('pt-BR',{style: 'currency', currency: 'EUR'})
+        '€ 1.545,50'
+        
+        */
+    </script>
+</body>
+</ht
