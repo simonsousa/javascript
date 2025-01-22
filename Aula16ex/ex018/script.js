@@ -1,4 +1,5 @@
 //ANALISADOR DE NUMEROS
+//falta resolver um erro, e finalizar....
 let num = document.querySelector('input#fnum')
 let lista = document.querySelector('select#flista')
 let res = document.querySelector('div#res')
