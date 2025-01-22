@@ -4,7 +4,6 @@ let lista = document.querySelector('select#flista')
 let res = document.querySelector('div#res')
 let valores = []
 
-
 function adicionar(){
     if(isNumero(num.value) && !inLista(num.value , valores)) {
         valores.push(Number(num.value))
