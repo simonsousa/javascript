@@ -1,9 +1,23 @@
-//ANALISADOR DE NUMEROS
-//falta resolver um erro, e finalizar....
 let num = document.querySelector('input#fnum')
 let lista = document.querySelector('select#flista')
 let res = document.querySelector('div#res')
 let valores = []
+
+function isNumero(n) {
+    if(Number(n) >= 1 && Number(n) <= 100) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function inLista(n , l) {
+    if(l.indexOf(Number(n)) != -1) {
+        return true
+    } else {
+        return false
+    }
+}
 
 function adicionar(){
     if(isNumero(num.value) && !inLista(num.value , valores)) {
@@ -29,6 +43,7 @@ function finalizar() {
         let soma=0
         let media=0
         for(let pos in valores) {
+            soma += valores[pos]
             if (valores[pos] > maior){
                 maior = valores[pos]
             }
@@ -36,26 +51,12 @@ function finalizar() {
                 menor = valores[pos]
             }
         }
+        media = soma / total
         res.innerHTML = ''
         res.innerHTML += `<p>Ao todo, temos ${total} números cadastrados.</p>`
         res.innerHTML += `<p>O maior valor informado foi ${maior}.</p>`
         res.innerHTML += `<p>O menor valor informado foi ${menor}.</p>`
         res.innerHTML += `<p>Somando todos os valores, temos ${soma}.</p>`
-    }
-}
-
-function isNumero(n) {
-    if(Number(n) >= 1 && Number(n) <= 100) {
-        return true
-    } else {
-        return false
-    }
-}
-
-function inLista(n , l) {
-    if(l.indexOf(Number(n)) != -1) {
-        return true
-    } else {
-        return false
+        res.innerHTML += `<p>Calculando a média, temos ${media.toFixed(2)}.</p>`
     }
 }
